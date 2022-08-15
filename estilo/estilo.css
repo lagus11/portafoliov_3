@@ -120,7 +120,8 @@ header nav ul li a {
 /* MAIN */
     #contenedor_sobre_mi {
         width: 100%;
-        height: calc(100vh - 41px);
+        min-height: calc(100vh - 41px);
+        max-height: auto;
         background-color: #2E246D;
         display: flex;
         flex-direction: row;
