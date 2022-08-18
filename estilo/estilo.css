@@ -232,6 +232,7 @@ header nav ul li a {
         max-height: auto;
         min-height: 100vh;
         background-color: #5C529F;
+        
     }
 
     #habilidades h2 {
@@ -323,7 +324,7 @@ header nav ul li a {
         width: 100%;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: baseline;
         justify-content: space-around;
         flex-wrap: wrap;
     }
@@ -395,3 +396,10 @@ header nav ul li a {
     /* PROYECTOS END */
 
 /* END MAIN */
+
+
+@keyframes mover {
+    0% {
+        transform: translate(100%);
+    }
+}
