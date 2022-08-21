@@ -16,6 +16,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 
 header h1 {
@@ -118,6 +119,23 @@ header nav ul li a {
 
 
 /* MAIN */
+    #regresar {
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border: none;
+        border-radius: 50%;
+    }
+
+    #regresar:hover {
+       cursor: pointer;
+        background-color: lightgray;
+    }
+
+
     #contenedor_sobre_mi {
         width: 100%;
         min-height: calc(100vh - 41px);
@@ -132,6 +150,14 @@ header nav ul li a {
         flex-basis: 70%;
         height:auto;
         text-align: center;
+        transition: 1s ease-in-out all;
+        transform: translateX(-300px);
+        opacity: 0;
+    }
+
+    #sobre_mi.visible {
+        opacity: 1;
+        transform: translateX(0px);
     }
 
     #sobre_mi h2 {
@@ -232,7 +258,7 @@ header nav ul li a {
         max-height: auto;
         min-height: 100vh;
         background-color: #5C529F;
-        
+        z-index: 1;
     }
 
     #habilidades h2 {
@@ -247,9 +273,12 @@ header nav ul li a {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         width: 100%;
+        opacity: 0;
+        transition: 1s ease-in-out all;
+        transform: translateX(300px);
     }
 
     .card_habilidades {
@@ -257,15 +286,18 @@ header nav ul li a {
         border-radius: 20px;
         width: 200px;
         height: 250px;
-        margin: 50px 70px;
+        margin: 40px 70px;
         transition: ease 0.5s ;
+    }
+
+    #container_habilidades.visible {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .card_habilidades:hover {
         cursor: pointer;
-        width: 220px;
-        height: 270px;
-        margin: 40px 60px; 
+        transform: scale(1.1);
         box-shadow: 5px 5px 5px black;
         background-color: white;
     }
@@ -327,6 +359,14 @@ header nav ul li a {
         align-items: baseline;
         justify-content: space-around;
         flex-wrap: wrap;
+        transition: 1s ease-in-out all;
+        transform: translateX(-500px);  
+        opacity: 0; 
+    }
+
+    #container_proyectos.visible {
+        opacity: 1;
+        transform: translateX(0);
     }
 
     .card_proyecto {
@@ -356,6 +396,12 @@ header nav ul li a {
     .proyecto_detalle {
         text-align: center;
         display: none;
+        animation: details 2s;
+    }
+    
+    @keyframes details {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
     }
 
     .proyecto_detalle h4 {
@@ -365,10 +411,18 @@ header nav ul li a {
         border-radius: 10px;
     }
 
-    .proyecto_detalle h3 {
-        margin: 20px 0;
-        font-weight: normal;
+    .proyecto_detalle span {
+        display: inline-block;
+        font-size: 18px;
+        padding: 8px;
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #2E246D;
+        color: white;
+        font-weight: bold;
     }
+
+    
 
     .proyecto_detalle div button {
         width: 150px;
@@ -394,6 +448,124 @@ header nav ul li a {
         background-color: #d9d9d970;
     }
     /* PROYECTOS END */
+    
+
+    /* CONTACTAME */
+
+    #contactame {
+        width: 100%;
+        background-color: #5C529F;
+        min-height: 100vh;
+        max-height: auto;
+    }
+
+    #contactame h2 {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: center;
+        padding: 25px;
+    }
+
+    #container_contactame {
+        width: 100%;
+        min-height: calc(100vh - 105px);
+        max-height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .card_contactame {
+        border-radius: 20px;
+        width: 200px;
+        height: 250px;
+        margin: 50px 0px;
+        padding: 5px;
+        transition: ease 0.5s ;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+     
+    }
+
+    .card_contactame:hover {
+        cursor: pointer;
+        box-shadow: 2px 2px 5px black;
+        transform: scale(1.1);
+    }
+
+    .card_contactame img {
+        width: 90%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+   
+    
+
+    #container_contactame form {
+        width: 350px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        color: black;
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+    #container_contactame form h2 {
+        color: black;
+        font-size: 25px;
+    }
+
+    #container_contactame form label {
+        font-size: 1.3rem;
+        font-family: bold;
+        margin-bottom: 4px;
+    }
+
+    #container_contactame form input {
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        height: 28px;
+        font-size: 1.2rem;
+        padding: 6px;
+        margin-bottom: 12px;
+   
+    }
+
+    #container_contactame form textarea {
+        box-sizing: border-box;
+        min-height: 100px;
+        padding: 10px;
+        margin-bottom: 16px;
+        border: 1px solid lightgray;
+    }
+
+    #container_contactame form input[type="submit"] {
+        background-color: #2D9CDB;
+        color: white;
+        font-weight: bold;
+        height: 50px;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+        border: none;
+    }
+
+    #container_contactame form input[type="submit"]:hover {
+        background-color: #42a7e2;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px black;
+    }
 
 /* END MAIN */
 

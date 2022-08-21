@@ -8,7 +8,7 @@
     <link href="./estilo/estilo.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>AH</h1>
         <div id="menu_bar">
             <a id="btn_menu"><span>&#9776;</span></a>
@@ -18,12 +18,15 @@
                 <li><a href="#contenedor_sobre_mi">Sobre Mi</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#">Contactame</a></li>
+                <li><a href="#contactame">Contactame</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+
+        <button id="regresar"><a href="#header">-></a></button>
+
         <section id="contenedor_sobre_mi">
             <div id="sobre_mi">
                 <h2>Hola, Mi nombre es Agustin Hernandez.</h2>
@@ -103,7 +106,9 @@
                     </div>
                     <div class="proyecto_detalle">
                         <h4>Gato- Pin Pon - Pokemon</h4>
-                        <h3>HTML5 - CSS3 - JAVASCRIPT</h3>
+                        <span>HTML5</span> 
+                        <span>CSS3</span>
+                        <span>JAVASCRIPT</span>
                         <div>
                             <button>Proyecto</button>
                             <button>Codigo</button>
@@ -118,7 +123,7 @@
                     </div>
                     <div class="proyecto_detalle">
                         <h4>Proyeto Control Inventario</h4>
-                        <h3>React.js - Express - MongoDB</h3>
+                        <span>React.js</span><span>Express</span><span>MongoDB</span>
                         <div>
                             <button>Proyecto</button>
                             <button>Codigo</button>
@@ -127,13 +132,13 @@
                 </div>
 
                 <div class="card_proyecto" >
-                    <h3>Proyectos Juego</h3>
+                    <h3>Proyecto Residencia Profesional</h3>
                     <div class="card_proyecto_img">
                         <img src="./img/laptop.png" alt="img_proyecto" />
                     </div>
                     <div class="proyecto_detalle">
-                        <h4>Gato- Pin Pon - Pokemon</h4>
-                        <h3>HTML5 - CSS3 - JAVASCRIPT</h3>
+                        <h4>Proyeto Control Inventario</h4>
+                        <span>React.js</span><span>Express</span><span>MongoDB</span>
                         <div>
                             <button>Proyecto</button>
                             <button>Codigo</button>
@@ -142,6 +147,30 @@
                 </div>
 
                 
+            </div>
+        </section>
+
+        <section id="contactame">
+            <h2>CONTACTAME</h2>
+            <div id="container_contactame"> 
+                <div class="card_contactame">
+                    <img src="./img/linkeind.png" alt="img_linkeind" />
+                </div>
+        
+                <div class="card_contactame">
+                    <img src="./img/github.png" alt="img_github" />
+                </div>
+
+                <form >
+                    <h2>Contactame</h2>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" />
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" />
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje"></textarea>
+                    <input type="submit" value="Enviar" />
+                </form>
             </div>
         </section>
     </main>
