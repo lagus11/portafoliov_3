@@ -16,7 +16,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 3;
 }
 
 header h1 {
@@ -55,13 +55,26 @@ header nav ul li a {
     border-left: 1px solid white;
 }
 
+#btn_menu_checkbox {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
+
+    body{
+        padding-top: 57px;
+    }
+
+    header {
+        position: relative;
+    }
+
     header h1 {
         display: block;
         width: auto;
         position: fixed;
         top: 0;
-        z-index: 1000;
+        z-index: 3;
         height: 55px;
         display: flex;
         align-items: center;
@@ -75,9 +88,10 @@ header nav ul li a {
         background-color: #2e2950;
     }
 
-    #btn_menu span {
+    #btn_menu label{
         cursor: pointer;
     }
+
 
     #menu_bar #btn_menu {
         display: block;
@@ -89,25 +103,28 @@ header nav ul li a {
         text-decoration: none;
     }
 
-    #menu_bar span {
+    #menu_bar label {
         float: right;
         font-size: 30px;
     }
 
     header nav {
-        width: 80%;
-        height: calc(100% - 87px);
+        width: 100%;
+        height: calc(auto - 87px);
         position: fixed;
+        right: 100%;
         top: 57px;
         margin: 0;
         overflow: scroll;
         background-color: #2e2950;
-        display: none;
+        transition: all 0.5s ease-in-out;
+        overflow: hidden;
+        text-align: center;
     }
 
-    header 
-
-    
+    #btn_menu_checkbox:checked + nav  {
+        right: 0%;
+    }
 
     header nav ul li {
         display: block;
@@ -119,6 +136,11 @@ header nav ul li a {
 
 
 /* MAIN */
+
+    main > section{
+        z-index: 1;
+    }
+
     #regresar {
         position: fixed;
         right: 30px;
@@ -128,6 +150,7 @@ header nav ul li a {
         background-color: white;
         border: none;
         border-radius: 50%;
+        z-index: 3;
     }
 
     #regresar:hover {
@@ -227,9 +250,19 @@ header nav ul li a {
     }
 
     @media screen and (max-width: 800px) {
+
+        .header nav ul {
+            display: block;
+        }
+
+
         #contenedor_sobre_mi {  
             padding-top: 80px;
             flex-direction: column;
+        }
+
+        #regresar {
+            display: none;
         }
 
         #sobre_mi {
@@ -258,7 +291,6 @@ header nav ul li a {
         max-height: auto;
         min-height: 100vh;
         background-color: #5C529F;
-        z-index: 1;
     }
 
     #habilidades h2 {
