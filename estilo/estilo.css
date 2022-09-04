@@ -208,7 +208,8 @@ header nav ul li a {
     #sobre_mi p {
         font-size: 1.8rem;
         margin: 15px auto 50px;
-        width: 800px;
+        max-width: 800px;
+        min-width: auto;
     }
 
 
@@ -267,9 +268,13 @@ header nav ul li a {
         }
 
         #sobre_mi h2,
-        #sobre_mi h3,
-        #sobre_mi h4 {
+        #sobre_mi h3{
             font-size: 1.5rem;
+        }
+
+        #sobre_mi p {
+            font-size: 1.3rem;
+            padding: 10px;
         }
 
         #img_sobre_mi {
