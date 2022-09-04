@@ -145,8 +145,8 @@ header nav ul li a {
         position: fixed;
         right: 30px;
         bottom: 30px;
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         background-color: white;
         border: none;
         border-radius: 50%;
@@ -158,6 +158,9 @@ header nav ul li a {
         background-color: lightgray;
     }
 
+    #regresar a img {
+        width: 100%;
+    }
 
     #contenedor_sobre_mi {
         width: 100%;
@@ -174,13 +177,6 @@ header nav ul li a {
         height:auto;
         text-align: center;
         transition: 1s ease-in-out all;
-        transform: translateX(-300px);
-        opacity: 0;
-    }
-
-    #sobre_mi.visible {
-        opacity: 1;
-        transform: translateX(0px);
     }
 
     #sobre_mi h2 {
@@ -209,13 +205,14 @@ header nav ul li a {
         to {font-size: 2.8rem;}
     }
 
-    #sobre_mi h4 {
+    #sobre_mi p {
         font-size: 1.8rem;
-        margin: 15px 0 50px;
+        margin: 15px auto 50px;
+        width: 800px;
     }
 
 
-    #sobre_mi h2, #sobre_mi h4 {
+    #sobre_mi h2, #sobre_mi p {
         color: white;
         font-weight: bold;
     }
@@ -308,24 +305,19 @@ header nav ul li a {
         justify-content: space-evenly;
         flex-wrap: wrap;
         width: 100%;
-        opacity: 0;
         transition: 1s ease-in-out all;
-        transform: translateX(300px);
     }
 
     .card_habilidades {
         background-color: #181433;
         border-radius: 20px;
-        width: 200px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
         margin: 40px 70px;
         transition: ease 0.5s ;
     }
 
-    #container_habilidades.visible {
-        opacity: 1;
-        transform: translateX(0);
-    }
+
 
     .card_habilidades:hover {
         cursor: pointer;
@@ -344,11 +336,11 @@ header nav ul li a {
     }
 
     .card_habilidades_img img {
-        width: 80%;
+        width: 70%;
     }
 
     .card_habilidades h3 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
         color: white;
         transition: ease 0.5s ;
@@ -356,7 +348,7 @@ header nav ul li a {
 
     .card_habilidades:hover h3 {
         color: black;
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
 
     /* HABILODADES END */
@@ -392,13 +384,10 @@ header nav ul li a {
         justify-content: space-around;
         flex-wrap: wrap;
         transition: 1s ease-in-out all;
-        transform: translateX(-500px);  
-        opacity: 0; 
     }
 
     #container_proyectos.visible {
         opacity: 1;
-        transform: translateX(0);
     }
 
     .card_proyecto {
@@ -436,25 +425,30 @@ header nav ul li a {
         100% { opacity: 1; }
     }
 
+    .proyecto_detalle span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 6px 0;
+    }
+
+    .proyecto_detalle span img {
+        width: 25px;
+        height: 25px;
+        background-color: #2E246D;
+        border-radius: 50%;
+        object-fit: cover;
+        padding: 6px;
+        margin: 0 4px;
+        cursor: pointer;
+    }
+
     .proyecto_detalle h4 {
         color: black;
         font-size: 1.7rem;
         background-color: #F5F5F5;
         border-radius: 10px;
     }
-
-    .proyecto_detalle span {
-        display: inline-block;
-        font-size: 18px;
-        padding: 8px;
-        margin: 10px;
-        border-radius: 5px;
-        background-color: #2E246D;
-        color: white;
-        font-weight: bold;
-    }
-
-    
 
     .proyecto_detalle div button {
         width: 150px;
@@ -512,8 +506,8 @@ header nav ul li a {
 
     .card_contactame {
         border-radius: 20px;
-        width: 200px;
-        height: 250px;
+        width: 180px;
+        height: 200px;
         margin: 50px 0px;
         padding: 5px;
         transition: ease 0.5s ;
@@ -532,7 +526,7 @@ header nav ul li a {
     }
 
     .card_contactame img {
-        width: 90%;
+        width: 80%;
         height: auto;
         display: flex;
         justify-content: center;
@@ -540,22 +534,21 @@ header nav ul li a {
     }
 
    
-    
-
     #container_contactame form {
-        width: 350px;
+        width: 330px;
         height: auto;
         display: flex;
         flex-direction: column;
         background-color: white;
         color: black;
-        padding: 25px;
+        padding: 25px ;
         border-radius: 10px;
     }
 
     #container_contactame form h2 {
         color: black;
         font-size: 25px;
+        padding: 0;
     }
 
     #container_contactame form label {
@@ -600,10 +593,3 @@ header nav ul li a {
     }
 
 /* END MAIN */
-
-
-@keyframes mover {
-    0% {
-        transform: translate(100%);
-    }
-}

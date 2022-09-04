@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio</title>
     <link href="./estilo/estilo.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header id="header">
@@ -29,22 +30,22 @@
         <button id="regresar"><a href="#header"><img src="./iconos/icon_arrow.png" alt="icono_arrow"/></a></button>
 
         <section id="contenedor_sobre_mi">
-            <div id="sobre_mi">
+            <div id="sobre_mi" data-aos="fade-right">
                 <h2>Hola, Mi nombre es Agustin Hernandez.</h2>
                 <h3><span><></span> Desarrollador FullStack <span><></span></h3>
-                <h4>Recien Egresado de Ingenieria en Sistemas Computacionales. Gusto por las tecnologias
+                <p>Recien Egresado de Ingenieria en Sistemas Computacionales. Gusto por las tecnologias
                     actuales, frondEnd como backEnd.
-                </h4>
+                </p>
                 <button>Dowload CV</button>
             </div>
-            <div id="img_sobre_mi">
+            <div id="img_sobre_mi" data-aos="zoom-in">
                 <img src="./img/img_laptop.png" alt="img_laptop">
             </div>
         </section>
 
         <section id="habilidades">
             <h2>Habilidades</h2>
-            <div id="container_habilidades">
+            <div id="container_habilidades" data-aos="fade-left">
                 
                 <div class="card_habilidades">
                     <div class="card_habilidades_img">
@@ -94,12 +95,13 @@
                     </div> 
                     <h3>SQL</h3>
                 </div>
+                
             </div>
         </section>
         <section id="proyectos">
             <h2>Proyectos</h2>
 
-            <div id="container_proyectos">
+            <div id="container_proyectos" data-aos="fade-right">
                 <div class="card_proyecto" >
                     <h3>Proyectos Juego</h3>
                     <div class="card_proyecto_img">
@@ -107,9 +109,11 @@
                     </div>
                     <div class="proyecto_detalle">
                         <h4>Gato- Pin Pon - Pokemon</h4>
-                        <span>HTML5</span> 
-                        <span>CSS3</span>
-                        <span>JAVASCRIPT</span>
+                        <span>
+                            <img src="./img/html5.png" alt="html5" title="HTML5">
+                            <img src="./img/css3.jpg" alt="css3" title="CSS3">
+                            <img src="./img/javascript-icon.png" alt="js" title="JS">
+                        </span>
                         <div>
                             <button>Proyecto</button>
                             <button>Codigo</button>
@@ -124,7 +128,11 @@
                     </div>
                     <div class="proyecto_detalle">
                         <h4>Proyeto Control Inventario</h4>
-                        <span>React.js</span><span>Express</span><span>MongoDB</span>
+                        <span>
+                            <img src="./img/react.png" alt="reactjs" title="REACTJS">
+                            <img src="./img/express.jpg" alt="express" title="EXPRESS">
+                            <img src="./img/mongoDb.png" alt="mongo" title="MONGODB">
+                        </span>
                         <div>
                             <button>Proyecto</button>
                             <button>Codigo</button>
@@ -139,7 +147,12 @@
                     </div>
                     <div class="proyecto_detalle">
                         <h4>Proyeto Control Inventario</h4>
-                        <span>React.js</span><span>Express</span><span>MongoDB</span>
+
+                        <span>
+                            <img src="./img/react.png" alt="reactjs">
+                            <img src="./img/express.jpg" alt="express">
+                            <img src="./img/mongoDb.png" alt="mongo">
+                        </span>
                         <div>
                             <button>Proyecto</button>
                             <button>Codigo</button>
@@ -153,7 +166,7 @@
 
         <section id="contactame">
             <h2>CONTACTAME</h2>
-            <div id="container_contactame"> 
+            <div id="container_contactame" data-aos="zoom-in-down"> 
                 <div class="card_contactame">
                     <img src="./img/linkeind.png" alt="img_linkeind" />
                 </div>
@@ -175,7 +188,8 @@
             </div>
         </section>
     </main>
-
-    <script src="./animation/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+  
 </body>
 </html>

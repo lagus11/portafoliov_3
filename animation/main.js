@@ -31,12 +31,12 @@ const cargarImagen = (entradas, obsercador) => {
     });
 }
 
-const oservador = new IntersectionObserver(cargarImagen, {
+const observador = new IntersectionObserver(cargarImagen, {
     root: null, 
     rootMargin: '0PX',
-    threshold: 0.1
+    threshold: 0.20
 });
 
-oservador.observe(imagen0);
-oservador.observe(imagen1);
-oservador.observe(imagen2);
+observador.observe(imagen0);
+observador.observe(imagen1);
+observador.observe(imagen2);
