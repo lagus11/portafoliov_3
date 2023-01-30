@@ -189,10 +189,19 @@ main > section{
     transition: transform 3s ease-in-out;
 }
 
-#img_sobre_mi img:hover {
+#img_sobre_mi img {
     cursor: pointer;
-    transform: rotate(360deg);
+    animation: rotar 10s infinite linear;
+    transform: rotate(0deg);
+    
 }
+
+@keyframes rotar {
+    from{ transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+
 
 /************** FINAL PRIMERA SECTION SORE MI ***************/
 
@@ -548,7 +557,7 @@ main > section{
         width: 100%;
         position: fixed;
         top: 0;
-        background-color: #2e2950;
+        background-color: var(--primary);
     }
 
     #btn_menu label{
@@ -573,6 +582,7 @@ main > section{
 
     #btn_menu_checkbox:checked + nav  {
         right: 0%;
+        display: grid;
     }
 
     header nav {
@@ -583,10 +593,11 @@ main > section{
         top: 57px;
         margin: 0;
         overflow: scroll;
-        background-color: #2e2950;
         transition: all 0.5s ease-in-out;
         overflow: hidden;
         text-align: center;
+        background-color: #093557c7;
+        border-radius: 0 0 10px 10px;
     }
 
     .header nav ul {
@@ -597,10 +608,7 @@ main > section{
         display: block;
     }
     
-    header nav ul li:hover {
-        background-color: #5C529F;
-    }
-
+    
     header nav ul li a {
         border-left-width: 10px;
         border-left: none;
